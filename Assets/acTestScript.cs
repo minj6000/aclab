@@ -23,4 +23,14 @@ public class acTestScript : MonoBehaviour
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime * v);
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * h);
     }
+
+    private void OnCollisionEnter(Collision collison)
+    {
+        if (collison.gameObject.CompareTag("Collison"))
+        {
+            collison.gameObject.SetActive(false);
+        }
+    }
+
+   
 }
