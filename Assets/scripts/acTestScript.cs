@@ -24,11 +24,13 @@ public class acTestScript : MonoBehaviour
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * h);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collison)
     {
-        if (collision.gameObject.CompareTag("CubeForCollision"))
+        if (collison.gameObject.CompareTag("Collison"))
         {
-            this.gameObject.SetActive(false);
+            collison.gameObject.SetActive(false);
         }
     }
+
+   
 }
