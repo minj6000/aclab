@@ -11,30 +11,30 @@ public class ObjectInteract : MonoBehaviour
     public AudioSource auForStreet;
     public AudioSource auForthis;
     public AudioSource Narr1;
-    MeshRenderer mr;
-    Material[] mats;
 
-    public bool on;
+    private MeshRenderer mr;
+    private Material[] mats;
+
     // Start is called before the first frame update
     void Start()
     {
         this.GetComponent<Outline>().enabled = false;
-        on = false;
         objToDisappear = GameObject.FindGameObjectsWithTag("disappear");
         objToAppear = GameObject.FindGameObjectsWithTag("Street");
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (on)
+        foreach (GameObject obj in objToDisappear)
         {
-            StartCoroutine(meshFade());
+            if (obj.GetComponent<MeshRenderer>() != null)
+            {
 
-            on = false;
-
+                obj.GetComponent<MeshRenderer>().material.SetFloat("_Cutoff", 0);
+            }
         }
     }
+     
+        
+    
+
 
     private float t = 0f;
     IEnumerator meshFade()
@@ -42,10 +42,12 @@ public class ObjectInteract : MonoBehaviour
         yield return new WaitForSeconds(1f);
         foreach (GameObject obj in objToDisappear)
         {
-            if(obj.GetComponent<MeshRenderer>() != null)
+            if (obj.GetComponent<ModifiedDissolveScript>() != null)
             {
+                obj.GetComponent<ModifiedDissolveScript>().fadestart = true;
                 obj.GetComponent<ModifiedDissolveScript>().speed = 0.15f;
             }
+            
             if (obj.GetComponent<SpriteRenderer>() != null)
             {
                 obj.GetComponent<SpriteRenderer>().DOFade(0, 8f);
@@ -57,18 +59,21 @@ public class ObjectInteract : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Narr1.Play();
         StartCoroutine(soundfade());
-        foreach (GameObject obj in objToAppear)
+        foreach (GameObject ob in objToAppear)
         {
-            obj.GetComponent<ModifiedDissolveFadeIn>().fadestart = true;
-
+            if(ob.GetComponent<ModifiedDissolveFadeIn>() != null)
+               {
+                    ob.GetComponent<ModifiedDissolveFadeIn>().fadestart = true;
+               }
         }
 
-        foreach (GameObject obj in objToDisappear)
+        foreach (GameObject ob in objToDisappear)
         {
-            obj.GetComponent<MeshCollider>().enabled = false;
+            ob.GetComponent<MeshCollider>().enabled = false;
         }
 
     }
+    
 
     private void OnMouseOver()
     {
@@ -77,7 +82,8 @@ public class ObjectInteract : MonoBehaviour
 
     private void OnMouseDown()
     {
-        on = true;
+        StartCoroutine(meshFade());
+
     }
     private void OnMouseExit()
     {
@@ -85,14 +91,16 @@ public class ObjectInteract : MonoBehaviour
         this.GetComponent<Outline>().enabled = false;
     }
 
-    
+
     IEnumerator soundfade()
     {
         auForStreet.volume = 0;
         yield return new WaitForSeconds(0.2f);
         auForStreet.Play();
         yield return new WaitForSeconds(0.1f);
-        auForStreet.DOFade(1f,10f);
-        
+        auForStreet.DOFade(1f, 10f);
+
     }
 }
+
+

@@ -9,32 +9,40 @@ public class ModifiedDissolveScript : MonoBehaviour
 
     public float speed = 0f;
 
-    private void Start(){
+    public bool fadestart;
+    private void Start()
+    {
         meshRenderer = this.GetComponent<MeshRenderer>();
         Material[] m = meshRenderer.materials;
-
-        foreach(Material mm in m)
+        fadestart = false;
+        foreach (Material mm in m)
         {
             mm.SetFloat("_Cutoff", 0f);
         }
     }
+
 
     private float t = 0.0f;
     private void Update()
     {
         Material[] mats = meshRenderer.materials;
 
-
-        foreach (Material m in mats)
+        if (fadestart)
         {
-            m.SetFloat("_Cutoff", Mathf.Sin(t * speed));
-            if(m.GetFloat("_Cutoff") > 0.9f)
+            foreach (Material m in mats)
             {
-                StartCoroutine(turnoff());
+                m.SetFloat("_Cutoff", Mathf.Sin(t * speed));
+                if (m.GetFloat("_Cutoff") > 0.9f)
+                {
+                    StartCoroutine(turnoff());
+                }
             }
+            t += Time.deltaTime / 8;
+
+            // Unity does not allow meshRenderer.materials[0]...
+            meshRenderer.materials = mats;
         }
-        t += Time.deltaTime / 8;
-        
+
         // Unity does not allow meshRenderer.materials[0]...
         meshRenderer.materials = mats;
     }
