@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.041089073, g: 0.07253318, b: 0.125435, a: 1}
+  m_IndirectSpecularColor: {r: 0.0030966264, g: 0.006290083, b: 0.014166994, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1777,6 +1777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &355039258
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1832,6 +1833,8 @@ GameObject:
   - component: {fileID: 418697075}
   - component: {fileID: 418697077}
   - component: {fileID: 418697078}
+  - component: {fileID: 418697081}
+  - component: {fileID: 418697079}
   m_Layer: 6
   m_Name: "\uC790\uC0B0 3\uBC31\uC11D \uC2DC \uBAA8\uC74C"
   m_TagString: disappear
@@ -1947,7 +1950,6 @@ MonoBehaviour:
   auForStreet: {fileID: 1908337621}
   auForthis: {fileID: 563909691}
   Narr1: {fileID: 1291123193}
-  on: 0
 --- !u!114 &418697078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1966,6 +1968,42 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!54 &418697079
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418697072}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &418697081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418697072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bd7f387aed6a494eb37bfca11e0b9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oneHanded: 1
+  handType: 0
+  HandStartTouch:
+    m_PersistentCalls:
+      m_Calls: []
+  HandStopTouch:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &428816964
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,6 +2353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &495220231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3202,7 +3241,7 @@ Transform:
   - {fileID: 1199277930768265556}
   - {fileID: 8997051405586910034}
   m_Father: {fileID: 4207293454412188}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &721768235
 MonoBehaviour:
@@ -4941,6 +4980,75 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1001 &1193410258
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373747, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942002210973373748, guid: a5226a72c9553294abfe172a458b5805, type: 3}
+      propertyPath: m_Name
+      value: Auto Hand Player Container
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5226a72c9553294abfe172a458b5805, type: 3}
 --- !u!1 &1243358633
 GameObject:
   m_ObjectHideFlags: 0
@@ -18430,6 +18538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &1130725058130334
 GameObject:
   m_ObjectHideFlags: 0
@@ -18465,27 +18574,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1593727806277376
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4490257362931324}
-  - component: {fileID: 20437472637372206}
-  - component: {fileID: 124991110433168776}
-  - component: {fileID: 81448068236263054}
-  - component: {fileID: 114657890510096610}
-  - component: {fileID: 114103969190511590}
-  m_Layer: 0
-  m_Name: First Person Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1773623347081780
 GameObject:
   m_ObjectHideFlags: 0
@@ -18507,7 +18595,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1773623347081781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18533,7 +18621,6 @@ Transform:
   m_LocalPosition: {x: 0.44, y: 1.37, z: -11.07}
   m_LocalScale: {x: 2.5, y: 6, z: 2.5}
   m_Children:
-  - {fileID: 4490257362931324}
   - {fileID: 4464631321220822}
   - {fileID: 4773208492021840}
   - {fileID: 721768234}
@@ -18552,20 +18639,6 @@ Transform:
   m_LocalScale: {x: 1, y: 0.9, z: 1}
   m_Children: []
   m_Father: {fileID: 4207293454412188}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4490257362931324
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593727806277376}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.488, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4207293454412188}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4773208492021840
@@ -18580,51 +18653,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4207293454412188}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &20437472637372206
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593727806277376}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!23 &23087463238098942
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18714,6 +18744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!54 &54063890678100754
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18762,6 +18793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &65702495782811276
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18803,14 +18835,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!81 &81448068236263054
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593727806277376}
-  m_Enabled: 1
 --- !u!33 &83876321464965876
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -18819,22 +18843,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3565987008656084963}
   m_Mesh: {fileID: 5665763164275481281, guid: ae4fe6a16115d2a4abeba4c7e6f969db, type: 3}
---- !u!114 &114103969190511590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593727806277376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 780f90e951d635f439326ea715cd97e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultFOV: 60
-  maxZoomFOV: 15
-  currentZoom: 0
-  sensitivity: 1
 --- !u!114 &114497868182492752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18863,21 +18871,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceThreshold: 0.15
   isGrounded: 0
---- !u!114 &114657890510096610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593727806277376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec72980442fddac4d86e75ab24b4d027, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 4207293454412188}
-  sensitivity: 2
-  smoothing: 1.5
 --- !u!114 &114762042134203002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18893,7 +18886,7 @@ MonoBehaviour:
   key: 306
   movement: {fileID: 114963311847166888}
   movementSpeed: 2
-  headToLower: {fileID: 4490257362931324}
+  headToLower: {fileID: 0}
   crouchYHeadPosition: 1
   colliderToLower: {fileID: 136877096875441190}
 --- !u!114 &114963311847166888
@@ -18967,14 +18960,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!124 &124991110433168776
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593727806277376}
-  m_Enabled: 1
 --- !u!136 &136877096875441190
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19250,6 +19235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &263733652812673893
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19323,6 +19309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &289649987128943407
 GameObject:
   m_ObjectHideFlags: 0
@@ -19355,6 +19342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &295968363840645076
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19533,6 +19521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &448896555296242348
 GameObject:
   m_ObjectHideFlags: 0
@@ -19565,6 +19554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &457073630749123667
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20075,6 +20065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &801069084188507180
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20220,6 +20211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &840247479252411545
 GameObject:
   m_ObjectHideFlags: 0
@@ -20252,6 +20244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &843214210699101340
 GameObject:
   m_ObjectHideFlags: 0
@@ -20284,6 +20277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &876150830066620637
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20446,6 +20440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &928911834418024376
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20571,6 +20566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &1072312244469743963
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20652,6 +20648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &1122283103512108862
 GameObject:
   m_ObjectHideFlags: 0
@@ -20684,6 +20681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &1129496809459223391
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20757,6 +20755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &1199277930768265556
 Transform:
   m_ObjectHideFlags: 0
@@ -20952,6 +20951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &1398618389532044670
 Transform:
   m_ObjectHideFlags: 0
@@ -20998,6 +20998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &1427600152886407977
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21178,6 +21179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &1604730783816766996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21291,6 +21293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &1712907573904834612
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21485,6 +21488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &1834477640074595184
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21586,6 +21590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &1914653231392508907
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21743,6 +21748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &1968203134133366732
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21889,6 +21895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &2031040240012722387
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -21937,6 +21944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &2156923089214829598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22010,6 +22018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &2192675565181503895
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22065,6 +22074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &2199397641365773574
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22146,6 +22156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &2207009211614324149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22405,6 +22416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &2374566859525346367
 Transform:
   m_ObjectHideFlags: 0
@@ -22515,6 +22527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &2414585570688248163
 Transform:
   m_ObjectHideFlags: 0
@@ -22591,6 +22604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2490194676921485296
 GameObject:
   m_ObjectHideFlags: 0
@@ -22623,6 +22637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2493965041816173653
 GameObject:
   m_ObjectHideFlags: 0
@@ -22655,6 +22670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &2501131023735534089
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22772,6 +22788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2584940915098183900
 GameObject:
   m_ObjectHideFlags: 0
@@ -22804,6 +22821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &2585972304215112673
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22954,6 +22972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2700555535295177705
 GameObject:
   m_ObjectHideFlags: 0
@@ -22986,6 +23005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2752645276804318672
 GameObject:
   m_ObjectHideFlags: 0
@@ -23018,6 +23038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2753959468314221777
 GameObject:
   m_ObjectHideFlags: 0
@@ -23050,6 +23071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &2755884950542016008
 Transform:
   m_ObjectHideFlags: 0
@@ -23152,6 +23174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2811567410066419546
 GameObject:
   m_ObjectHideFlags: 0
@@ -23184,6 +23207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &2821922464081916576
 Transform:
   m_ObjectHideFlags: 0
@@ -23246,6 +23270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2909892177235059340
 GameObject:
   m_ObjectHideFlags: 0
@@ -23278,6 +23303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &2943081937710084553
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23332,6 +23358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &2997332574749149138
 GameObject:
   m_ObjectHideFlags: 0
@@ -23364,6 +23391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &2999129776298061581
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23437,6 +23465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &3045119277932537018
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -23540,6 +23569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &3146533799169680554
 Transform:
   m_ObjectHideFlags: 0
@@ -23586,6 +23616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &3159218861169945104
 GameObject:
   m_ObjectHideFlags: 0
@@ -23666,6 +23697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &3180178779164216858
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24122,6 +24154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &3490721268744785976
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24195,6 +24228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &3584298370910939736
 GameObject:
   m_ObjectHideFlags: 0
@@ -24321,6 +24355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &3658226473350304484
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24692,6 +24727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &3849762624474417358
 GameObject:
   m_ObjectHideFlags: 0
@@ -24724,6 +24760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &3853176689469151743
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -24860,6 +24897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &3894554533125492585
 Transform:
   m_ObjectHideFlags: 0
@@ -24906,6 +24944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &3924232459109929452
 Transform:
   m_ObjectHideFlags: 0
@@ -25048,6 +25087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &4026092028987579883
 Transform:
   m_ObjectHideFlags: 0
@@ -25315,6 +25355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &4174339087315208660
 GameObject:
   m_ObjectHideFlags: 0
@@ -25347,6 +25388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &4205160177604040720
 Transform:
   m_ObjectHideFlags: 0
@@ -25454,6 +25496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &4321851931574343860
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25516,6 +25559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &4365070615863283926
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -25638,6 +25682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &4508381590734485749
 Transform:
   m_ObjectHideFlags: 0
@@ -25839,6 +25884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &4598540486749827265
 Transform:
   m_ObjectHideFlags: 0
@@ -25942,6 +25988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &4695941490019361512
 Transform:
   m_ObjectHideFlags: 0
@@ -26045,6 +26092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &4812060308088657019
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26197,6 +26245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &4931218027562845394
 Transform:
   m_ObjectHideFlags: 0
@@ -26387,6 +26436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &5050361424954329974
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26558,6 +26608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &5138699260160585319
 Transform:
   m_ObjectHideFlags: 0
@@ -26604,6 +26655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &5165464953649119230
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26696,6 +26748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &5275824516830529349
 Transform:
   m_ObjectHideFlags: 0
@@ -26750,6 +26803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &5334037118514834166
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26790,6 +26844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &5338600395354711184
 GameObject:
   m_ObjectHideFlags: 0
@@ -26822,6 +26877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &5341121481400439745
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -26926,6 +26982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &5392398321512276049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27063,6 +27120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!114 &5424774323890986477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27076,6 +27134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+  fadestart: 0
 --- !u!4 &5437861793864239330
 Transform:
   m_ObjectHideFlags: 0
@@ -27333,6 +27392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &5557996387006160472
 Transform:
   m_ObjectHideFlags: 0
@@ -27424,6 +27484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &5647048988192645941
 Transform:
   m_ObjectHideFlags: 0
@@ -27574,6 +27635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &5767533672772425100
 Transform:
   m_ObjectHideFlags: 0
@@ -27635,6 +27697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &5801172154633357936
 Transform:
   m_ObjectHideFlags: 0
@@ -27770,6 +27833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &5916410282450841050
 Transform:
   m_ObjectHideFlags: 0
@@ -27816,6 +27880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &6070953797097661949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28059,6 +28124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &6379156259108314694
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28307,6 +28373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &6543444350987797703
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28347,6 +28414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &6573524772275052847
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28619,6 +28687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &6887234589050729051
 GameObject:
   m_ObjectHideFlags: 0
@@ -28651,6 +28720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &6893079531599833375
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28738,6 +28808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &6938928175971987715
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29017,6 +29088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &7157279887435734417
 GameObject:
   m_ObjectHideFlags: 0
@@ -29049,6 +29121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &7178114114216291790
 GameObject:
   m_ObjectHideFlags: 0
@@ -29081,6 +29154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &7181012073965941056
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29240,6 +29314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &7262903598012350016
 GameObject:
   m_ObjectHideFlags: 0
@@ -29397,6 +29472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &7367897113037294013
 GameObject:
   m_ObjectHideFlags: 0
@@ -29490,6 +29566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &7420127020031423827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29577,6 +29654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &7550820028930195815
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29828,6 +29906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!1 &7717331357328262065
 GameObject:
   m_ObjectHideFlags: 0
@@ -29860,6 +29939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &7718895832303174647
 Transform:
   m_ObjectHideFlags: 0
@@ -29906,6 +29986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &7762067043486008055
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30043,6 +30124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &7859409215240947597
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30141,6 +30223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &7991704401218106058
 Transform:
   m_ObjectHideFlags: 0
@@ -30240,6 +30323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!108 &8055872176635489054
 Light:
   m_ObjectHideFlags: 0
@@ -30392,6 +30476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &8119214459584147705
 Transform:
   m_ObjectHideFlags: 0
@@ -30479,6 +30564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &8162072902631226943
 Transform:
   m_ObjectHideFlags: 0
@@ -30767,6 +30853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &8306369736933826575
 Transform:
   m_ObjectHideFlags: 0
@@ -30821,6 +30908,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &8425314033039529520
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30877,6 +30965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &8443713292755098218
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31038,6 +31127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &8534081336463978568
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31100,6 +31190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &8567716999649048452
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31365,6 +31456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &8670761336288117565
 Transform:
   m_ObjectHideFlags: 0
@@ -31411,6 +31503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!33 &8701224793522162907
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31451,6 +31544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &8747891371957181923
 Transform:
   m_ObjectHideFlags: 0
@@ -31632,6 +31726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &8929142842184264972
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31727,6 +31822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &8981784598492432038
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31859,6 +31955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!23 &9130101596552170431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31932,6 +32029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  fadestart: 0
 --- !u!4 &9160271088335860748
 Transform:
   m_ObjectHideFlags: 0
