@@ -5,6 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - CubeForCollision
+  - Txt
+  - disappear
+  - Street
+  - Nextline2
+  - Nextline3
+  - Narr4
+  - Narr5
+  - Narr6
+  - Narr7
+  - Narr8
+  - Narr9
+  - Ash
+  - End
   layers:
   - Default
   - TransparentFX
@@ -12,6 +25,7 @@ TagManager:
   - 
   - Water
   - UI
+  - Interactable
   - 
   - 
   - 
@@ -33,11 +47,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HandPlayer
+  - Hand
+  - Grabbable
+  - Grabbing
   m_SortingLayers:
   - name: Default
     uniqueID: 0
