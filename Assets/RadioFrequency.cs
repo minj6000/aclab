@@ -6,19 +6,19 @@ using DG.Tweening;
 public class RadioFrequency : MonoBehaviour
 {
     [SerializeField] AudioSource Music;
-    private float ModifiedZ;
+    private float ModifiedY;
     private Transform OriginalPos;
     // Start is called before the first frame update
     void Start()
     {
         OriginalPos = this.transform;
-        ModifiedZ = this.transform.position.z - 3f;
+        ModifiedY = this.transform.position.y - 3f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(this.transform.position.z < ModifiedZ)
+        if(this.transform.position.z < ModifiedY)
         {
             //다음 이벤트 일어남
             Music.Play();
