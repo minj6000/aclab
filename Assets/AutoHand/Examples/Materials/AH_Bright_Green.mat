@@ -11,16 +11,22 @@ Material:
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 03428a82fc4633a830312201ffc067a22201b773
   m_ShaderKeywords: 
   m_LightmapFlags: 4
 =======
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 2
 >>>>>>> dev/HJH
+<<<<<<< HEAD
 =======
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 2
 >>>>>>> dev/HJH
+=======
+>>>>>>> 03428a82fc4633a830312201ffc067a22201b773
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -86,11 +92,17 @@ Material:
     - _Color: {r: 0.06456808, g: 1, b: 0.051886797, a: 1}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 03428a82fc4633a830312201ffc067a22201b773
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
 =======
     - _EmissionColor: {r: 0.71155214, g: 0.7735849, b: 0.7163088, a: 1}
 >>>>>>> dev/HJH
+<<<<<<< HEAD
 =======
     - _EmissionColor: {r: 0.71155214, g: 0.7735849, b: 0.7163088, a: 1}
 >>>>>>> dev/HJH
+=======
+>>>>>>> 03428a82fc4633a830312201ffc067a22201b773
   m_BuildTextureStacks: []

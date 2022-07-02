@@ -9,13 +9,19 @@ TextureImporter:
     enableMipMap: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 03428a82fc4633a830312201ffc067a22201b773
     sRGBTexture: 1
 =======
     sRGBTexture: 0
 >>>>>>> dev/HJH
+<<<<<<< HEAD
 =======
     sRGBTexture: 0
 >>>>>>> dev/HJH
+=======
+>>>>>>> 03428a82fc4633a830312201ffc067a22201b773
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -62,13 +68,19 @@ TextureImporter:
   spriteTessellationDetail: -1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 03428a82fc4633a830312201ffc067a22201b773
   textureType: 0
 =======
   textureType: 1
 >>>>>>> dev/HJH
+<<<<<<< HEAD
 =======
   textureType: 1
 >>>>>>> dev/HJH
+=======
+>>>>>>> 03428a82fc4633a830312201ffc067a22201b773
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
